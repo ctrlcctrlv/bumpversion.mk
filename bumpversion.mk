@@ -25,8 +25,8 @@ SHELL:=/bin/bash
 
 GIT:=git
 ifneq (,$(GNUPGHOME))
-GITTAGFLAGS:=-S
-GITCOMMITFLAGS:=$(GITTAGFLAGS)
+GITTAGFLAGS:=-s
+GITCOMMITFLAGS:=-S
 endif
 
 .SILENT: git_bumpmajorversion git_bumpmidversion git_bumppatchversion
@@ -61,13 +61,15 @@ CALLEDT=$(shell sed -e 's/git_bump\([a-z]\+\)version/\1/' <<< "$@")
 git_bump%version:
 	$(MAKE) $(MFLAGS) $(CALLED)
 	GITCOMMANDS='
-	        $(GIT) tag $(GITTAGFLAGS) v$(VERSION) -m "Version $(VERSION)"
+	        $(MAKE)
+	        $(GIT) add .env .version README.md
 	        $(GIT) commit $(GITCOMMITFLAGS) -m "Bumped $(CALLEDT) version to $(VERSION)" --no-edit
+	        $(GIT) tag $(GITTAGFLAGS) v$(VERSION) -m "Version $(VERSION)"
 	'	
 ifeq (,$(GITAUTOEXEC))
 	echo "Now run:$$GITCOMMANDS"
-else ifeq (,$(GITAUTOEXEC))
-	eval $$GITCOMMANDS
+else ifeq (1,$(GITAUTOEXEC))
+	eval "$$GITCOMMANDS"
 endif
 
 bumppatchversion:
