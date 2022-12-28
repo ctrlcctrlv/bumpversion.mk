@@ -41,6 +41,13 @@ RELNO  :=$(shell printf %q "$$(awk 'BEGIN {FS="-"} {print $$2}' < .version)")
 	FIRST=$$(awk 'BEGIN {FS="."} {print $$1}' <<< "$$VERSION")
 	  MID=$$(awk 'BEGIN {FS="."} {print $$2}' <<< "$$VERSION")
 	 LAST=$$(awk 'BEGIN {FS="."} {print $$3}' <<< "$$VERSION")
+	for v in FIRSTN MIDN LASTN; do \
+		var=$$(head -c -2 <<< $$v)
+		if [[ $${!v} == -1 ]]; then \
+			eval "$${var}=0"; \
+			eval "$${var}N=0"; \
+		fi \
+	done
 	RELNO_ADD=$$([ ! -z $(RELNO) ] && printf -- -$(PERCENT)s $(RELNO) || printf '')
 	VERSION="$$((FIRST+FIRSTN)).$$((MID+MIDN)).$$((LAST+LASTN))$$RELNO_ADD"
 	printf $(PERCENT)s "$$VERSION" > $@
@@ -68,11 +75,11 @@ bumppatchversion:
 	$(MAKE) $(MFLAGS) .env
 
 bumpmidversion:
-	export FIRSTN=0 MIDN=1 LASTN=0
+	export FIRSTN=0 MIDN=1 LASTN=-1
 	$(MAKE) $(MFLAGS) .env
 
 bumpmajorversion:
-	export FIRSTN=1 MIDN=0 LASTN=0
+	export FIRSTN=1 MIDN=-1 LASTN=-1
 	$(MAKE) $(MFLAGS) .env
 
 bumprelnoversion:
