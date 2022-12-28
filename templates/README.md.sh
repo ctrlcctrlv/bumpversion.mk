@@ -46,7 +46,5 @@ project that uses this.
 Also, this README is built with `bumpversion.mk`.
 
 # License
-```
 EOF
-cat templates/LICENSE
-echo '```'
+printf '![%s](docs/LICENSE.png)' "$(cat templates/LICENSE | sed -e 's/$/<br>/g;' | tr $'\n' ' ')"

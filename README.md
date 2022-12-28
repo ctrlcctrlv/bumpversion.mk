@@ -41,22 +41,4 @@ project that uses this.
 Also, this README is built with `bumpversion.mk`.
 
 # License
-```
-###############################################################################
-#🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟`bumpversion.mk`: bumpversion recipe for GNUmakefiles🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟#
-###############################################################################
-# Copyright 2020–2023 ——————— ((((((((((((((Fredrick R. Brennan)))))))))))))) #
-###############################################################################
-# Licensed under the Apache License, Version 2.0 (the "License"); you may not #
-# use  this  software  or  any of the provided source code  files  except  in #
-# compliance with the License. You may obtain a copy of the License at:➦ ➦ ➦ ⮯#
-###############################################################################
-#🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 ➦ <https://www.apache.org/licenses/LICENSE-2.0>#
-###############################################################################
-# Unless  required  by  applicable  law or agreed  to  in  writing,  software #
-# distributed  under the License is distributed on an "as is" basis,  without #
-# warranties  or  conditions of any kind, either express or implied. See  the #
-# License  for  the specific language governing permissions  and  limitations #
-# under the License. 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜 #
-###############################################################################
-```
+![###############################################################################<br> #🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟`bumpversion.mk`: bumpversion recipe for GNUmakefiles🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟🮞🮟#<br> ###############################################################################<br> # Copyright 2020–2023 ——————— ((((((((((((((Fredrick R. Brennan)))))))))))))) #<br> ###############################################################################<br> # Licensed under the Apache License, Version 2.0 (the "License"); you may not #<br> # use  this  software  or  any of the provided source code  files  except  in #<br> # compliance with the License. You may obtain a copy of the License at:➦ ➦ ➦ ⮯#<br> ###############################################################################<br> #🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 🮞🮟 ➦ <https://www.apache.org/licenses/LICENSE-2.0>#<br> ###############################################################################<br> # Unless  required  by  applicable  law or agreed  to  in  writing,  software #<br> # distributed  under the License is distributed on an "as is" basis,  without #<br> # warranties  or  conditions of any kind, either express or implied. See  the #<br> # License  for  the specific language governing permissions  and  limitations #<br> # under the License. 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜 #<br> ###############################################################################<br> ](docs/LICENSE.png)
