@@ -1,4 +1,4 @@
-# `make bumpversion` v0.1.1 ⏫20221227
+# `make bumpversion` v0.1.2 ⏫20221227
 
 `bumpversion.mk` adds a command called `make bumpversion` (GNU Make
 only&dagger;). When run, it gives you a four step flow:
